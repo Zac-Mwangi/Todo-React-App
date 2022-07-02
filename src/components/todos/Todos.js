@@ -1,9 +1,11 @@
 import React from "react";
+import './Todos.css'
 
-const Todos = () => {
+const Todos = (props) => {
+    console.log(props.todos)
     return(
-        <div>
-            <p>I am a todo</p>
+        <div className="todo">
+            {props.todos.map((todo)=> <p>{todo}</p>)}
         </div>
     )
 }
